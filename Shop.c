@@ -35,7 +35,7 @@ if(unit[i]>=500.00) {
 unit[i]=unit[i]*0.95;
 
 }
-total=total+(unit[i]+(unit[i]*(gst[i]/100))) * quantity[i];
+total=total+(unit[i]+(unit[i]*(gst[i]/100.00))) * quantity[i];
 
 }
 
@@ -44,9 +44,10 @@ int k;
 
 for(int i=0;i<4;i++){
 
-if(((unit[i]*(gst[i]/100))* quantity[i]) > maxgst) maxgst =unit[i]*(gst[i]/100)*quantity[i]; 
+if(((unit[i]*(gst[i]/100.00))* quantity[i]) > maxgst) {
+ maxgst =unit[i]*(gst[i]/100.00)*quantity[i]; 
  k = 1+1;
-
+}
 } 
 printf("the max gst is for the product %d\n", k);
 printf("the total amount paid = %d Rupees", total);
